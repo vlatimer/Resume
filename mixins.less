@@ -1,0 +1,24 @@
+.btn(@bg, @width, @height) {
+  width: @width;
+  height: @height;
+  background-color: @bg;
+
+  &+& {
+    margin-top: 0.3rem;
+  }
+
+  &:hover {
+    padding-left: 1.125rem;
+  }
+
+  &:focus {
+    padding-left: 1.25rem;
+    background-color: darken(@bg, 35%);
+  }
+}
+
+.line(@brc, @width, @brw) {
+  height: 0;
+  width: @width;
+  border: @brw solid @brc;
+}
