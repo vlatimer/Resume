@@ -1,0 +1,21 @@
+@import "mixins";
+@import "styles";
+
+.menu {
+  margin: 0.25rem;
+  grid-area: menu;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+
+  &__btn {
+    padding-left: 1rem;
+    text-align: start;
+
+    .btn(@primary, 80%, 2rem)
+  }
+
+  @media @breakpoint-md {
+    display: none;
+  }
+}

@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Resume</title>
 
+  <link rel="stylesheet/less" type="text/css" href="./menu.less">
+  <link rel="stylesheet/less" type="text/css" href="./about.less">
+  <link rel="stylesheet/less" type="text/css" href="./rest.less">
   <link rel="stylesheet/less" type="text/css" href="./styles.less">
 
 </head>
@@ -42,11 +45,11 @@
       <div class="about__contacts">
         <!-- <button onclick="location.href='mailto:john@dotrex.co'" class="about__contacts-email btn">email:
           john@dotrex.com</button> -->
-        <button class="about__contacts-email btn">email: john@dotrex.com</button>
+        <button class="about__contacts-email btn">john@dotrex.com</button>
         /
         <!-- <button onclick="location.href = 'tel:+123 456 789 111'" class="about__contacts-phone btn">phone: +123 456 789
           111</button> -->
-        <button class="about__contacts-phone btn">phone: +123 456 789 111</button>
+        <button class="about__contacts-phone btn">+123 456 789 111</button>
       </div>
 
       <div class="about__social-network">
@@ -60,7 +63,59 @@
       </div>
 
     </div>
-    <div class="block rest"></div>
+    <div class="block rest">
+      <div class="rest__resume-box">
+        <h2 class="resume-box__header">RESUME</h2>
+        <div class="resume-box__line"></div>
+        <div class="resume-box__place-name_e">Education</div>
+        <div class="resume-box__information-box">
+          <h3 class="information-box__header">Graphic Design</h3>
+          <p class="information-box__text information-box__text_style_i">St. Patric University (2 Years Course) -
+            Graduation May 2013</p>
+          <div class="information-box__line"></div>
+          <p class="information-box__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius in facere
+            reiciendis quae sapiente? Nulla labore corporis dolores voluptatem ad?</p>
+        </div>
+        <div class="resume-box__information-box">
+          <h3 class="information-box__header">Master of Web Design</h3>
+          <p class="information-box__text information-box__text_style_i">St. Patric University (2 Years Course) -
+            Graduation May 2013</p>
+          <div class="information-box__line"></div>
+          <p class="information-box__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius in
+            facere reiciendis quae sapiente? Nulla labore corporis dolores voluptatem ad?</p>
+        </div>
+        <div class="resume-box__place-name_h">Employment History</div>
+        <div class="resume-box__information-box">
+          <h3 class="information-box__header">PlayGame Company</h3>
+          <p class="information-box__text information-box__text_style_i">2013 - 2016 California</p>
+          <div class="information-box__line"></div>
+          <p class="information-box__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius in
+            facere
+            reiciendis quae sapiente? Nulla labore corporis dolores voluptatem ad?</p>
+        </div>
+        <div class="resume-box__information-box">
+          <h3 class="information-box__header">DBTeam (DevBox Team)</h3>
+          <p class="information-box__text information-box__text_style_i">2016 - 2019 Dallas</p>
+          <div class="information-box__line"></div>
+          <p class="information-box__text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius in
+            facere reiciendis quae sapiente? Nulla labore corporis dolores voluptatem ad?</p>
+        </div>
+      </div>
+      <div class="rest__skills-box">
+        <h2 class="skills-box__header">SKILLS</h2>
+        <div class="skills-box__line"></div>
+        <div class="skills-box__place-name_c">Tech Stack:</div>
+        <div class="skills-box__skills">
+          <div data-text="js" class="skill"><img src="./Image/js.png">JavaScript</div>
+          <div data-text="css" class="skill"><img src="./Image/css.png">CSS</div>
+          <div data-text="pgsql" class="skill"><img src="./Image/pgsql.png">PostgreSQL</div>
+          <div data-text="py" class="skill"><img src="./Image/py.png">Python</div>
+          <div data-text="html" class="skill"><img src="./Image/html.png">HTML</div>
+          <div class="skill" data-text="git"><img src="./Image/git.png">GitHub</div>
+        </div>
+      </div>
+
+    </div>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
 </body>

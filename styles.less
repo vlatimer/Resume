@@ -1,8 +1,10 @@
 @import "mixins";
 @breakpoint-lg: ~"(max-width: 992px)";
+@breakpoint-md: ~"(max-width: 768px)";
 @primary: rgb(30, 174, 171);
 
 * {
+  font-family: sans-serif;
   margin: 0;
 }
 
@@ -16,179 +18,12 @@
   height: 100vh;
   width: 100%;
   background-color: rgb(48, 49, 54);
-}
 
-
-.menu {
-  margin: 0.25rem;
-  grid-area: menu;
-  display: flex;
-  align-items: flex-end;
-  flex-direction: column;
-
-  &__btn {
-    padding-left: 1rem;
-    text-align: start;
-
-    .btn(@primary, 80%, 2rem)
+  @media @breakpoint-md {
+    grid-template: 5% 2fr 10% / 5% 1.5fr 1.5fr 5%;
+    grid-template-areas: ". . . . "". about rest ."".  . . . ";
   }
 }
-
-.about {
-  grid-area: about;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-
-  &__img {
-    position: relative;
-    width: 50%;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    border: 5px solid rgb(221, 221, 221);
-    overflow: hidden;
-
-    img {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  &__header {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-
-    @media @breakpoint-lg {
-      & * {
-        font-size: 1.5rem;
-      }
-    }
-
-    &_color_pr {
-      margin-left: 5px;
-      color: @primary
-    }
-  }
-
-  &__text {
-    text-align: center;
-    width: 80%;
-
-    &_weigth_s {
-      font-weight: 900;
-    }
-
-    &_color-with-alpha {
-      color: fade(black, 50%);
-    }
-  }
-
-  &__line {
-    .line(fade(black, 20%), 90%, 1px)
-  }
-
-  &__contacts {
-    width: 80%;
-    cursor: pointer;
-    z-index: 0;
-    overflow: hidden;
-    width: max-content;
-    color: white;
-    padding: 0.35rem;
-    position: relative;
-    border-radius: 5px;
-    background-color: @primary;
-
-    .btn {
-      z-index: 2;
-      position: unset;
-      background-color: transparent;
-    }
-
-    &-email::before {
-      transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
-      z-index: -1;
-      background-color: darken(@primary, 35%);
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      content: '';
-      position: absolute;
-    }
-
-    &-email:focus::before {
-      left: 0;
-    }
-
-    &-phone::before {
-      transition: all 1s cubic-bezier(0.86, 0, 0.07, 1);
-      z-index: -1;
-      background-color: darken(@primary, 35%);
-      top: -100%;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      content: '';
-      position: absolute;
-    }
-
-    &-phone:focus::before {
-      top: 0;
-    }
-
-    @media @breakpoint-lg {
-      font-size: 0.5rem;
-      width: 70%;
-
-      & * {
-        font-size: 0.5rem;
-      }
-    }
-  }
-
-  &__social-network {
-    &_a {
-      display: inline-block;
-      position: relative;
-
-      aspect-ratio: 1 / 1;
-      width: 30px;
-      overflow: hidden;
-      background-color: black;
-
-      &+& {
-        margin-left: 1rem;
-      }
-
-      img {
-        transition: 0.25s ease;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 70%;
-        width: 70%;
-        position: absolute;
-      }
-
-      &:hover {
-        img {
-          height: 80%;
-          width: 80%;
-        }
-      }
-    }
-  }
-}
-
-.rest {
-  grid-area: rest;
-}
-
-
 
 .block {
   max-width: 30rem;
