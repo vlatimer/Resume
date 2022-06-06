@@ -1,4 +1,5 @@
 @import "mixins";
+@import "rest";
 @breakpoint-lg: ~"(max-width: 992px)";
 @breakpoint-md: ~"(max-width: 768px)";
 @primary: rgb(30, 174, 171);
@@ -26,6 +27,7 @@
 }
 
 .block {
+  position: relative;
   max-width: 30rem;
   margin: 0.25rem;
   background-image: url(./Image/block_bg.jpeg);
@@ -45,4 +47,82 @@ a {
   font-weight: 200;
   color: white;
   border: none;
+}
+
+.information-box {
+  border: 5px double gray;
+
+  &__header {
+    margin-bottom: 5px;
+  }
+
+  &__text {
+    font-size: 0.7rem;
+    opacity: 0.7;
+
+    &_style_i {
+      font-style: italic;
+      opacity: 0.3;
+    }
+  }
+
+  &__line {
+    .line(fade(black, 20%), 100%, 0.5px);
+    margin: 10px 0 10px 0;
+  }
+}
+
+.abilities-box {
+  &__child[data-text="js"] {
+    .abilityChild(1, 1);
+  }
+
+  &__child[data-text="git"] {
+    .abilityChild(3, 4);
+  }
+
+  &__child[data-text="css"] {
+    .abilityChild(3, 2);
+  }
+
+  &__child[data-text="pgsql"] {
+    .abilityChild(3, 3);
+  }
+
+  &__child[data-text="py"] {
+    .abilityChild(1, 3);
+  }
+
+  &__child[data-text="html"] {
+    .abilityChild(1, 4);
+  }
+}
+
+.work-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__header {
+    font-size: 1.1rem;
+    opacity: 0.7;
+    position: relative;
+  }
+
+  &__img {
+    border: 5px solid rgb(30, 174, 171);
+    border-radius: 10px;
+    margin: 20px 0 20px 0;
+    width: 90%;
+    position: relative
+  }
+}
+
+.box__line {
+  .line(fade(black, 20%), 100%, 1px);
+  margin: 10px 0 10px 0;
+}
+
+.box__header {
+  margin-bottom: 10px;
 }

@@ -24,9 +24,15 @@
   }
 
   &__header {
-    width: 80%;
-    display: flex;
-    justify-content: center;
+    &-box {
+      width: 80%;
+      display: flex;
+      justify-content: center;
+
+      & * {
+        white-space: nowrap;
+      }
+    }
 
     & * {
       white-space: nowrap;
@@ -56,21 +62,23 @@
   }
 
   &__contacts {
-    white-space: nowrap;
-    width: fit-content;
-    cursor: pointer;
-    z-index: 0;
-    overflow: hidden;
-    color: white;
-    padding: 0.35rem;
-    position: relative;
-    border-radius: 5px;
-    background-color: @primary;
+    &-box {
+      white-space: nowrap;
+      width: fit-content;
+      cursor: pointer;
+      z-index: 0;
+      overflow: hidden;
+      color: white;
+      padding: 0.35rem;
+      position: relative;
+      border-radius: 5px;
+      background-color: @primary;
 
-    .btn {
-      z-index: 2;
-      position: unset;
-      background-color: transparent;
+      .btn {
+        z-index: 2;
+        position: unset;
+        background-color: transparent;
+      }
     }
 
     &-email::before {
@@ -119,7 +127,7 @@
       white-space: nowrap;
     }
 
-    &_a {
+    &-a {
       display: inline-block;
       position: relative;
 
