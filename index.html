@@ -17,12 +17,12 @@
 <body>
   <div class="wrapper">
     <div class="menu">
-      <button class="menu__btn btn">HOME</button>
-      <button class="menu__btn btn">RESUME</button>
-      <button class="menu__btn btn">SKILLS</button>
-      <button class="menu__btn btn">PORTFOLIO</button>
-      <button class="menu__btn btn">BLOG</button>
-      <button class="menu__btn btn">CONTACT</button>
+      <button onclick="scrollToElem(anchorHome)" class="menu__btn btn">HOME</button>
+      <button onclick="scrollToElem(anchorResume)" class=" menu__btn btn">RESUME</button>
+      <button onclick="scrollToElem(anchorSkills)" class="menu__btn btn">SKILLS</button>
+      <button onclick="scrollToElem(anchorPortfolio)" class="menu__btn btn">PORTFOLIO</button>
+      <button onclick="scrollToElem(anchorBlog)" class="menu__btn btn">BLOG</button>
+      <button onclick="scrollToElem(anchorContacts)" class="menu__btn btn">CONTACT</button>
     </div>
     <div class="block about">
       <div class="about__img">
@@ -62,9 +62,14 @@
       </div>
 
     </div>
-    <div class="rest block">
+    <div id="restBox" class="rest block">
+      <div class="rest__home-box">
+        <h2 id="anchorHome" class="rest__home-header box__header">HOME</h2>
+        <div class="rest__home-line box__line"></div>
+        <div class="rest__home-big-img">Programming is Life</div>
+      </div>
       <div class="rest__resume-box">
-        <h2 class="rest__resume-header box__header">RESUME</h2>
+        <h2 id="anchorResume" class="rest__resume-header box__header">RESUME</h2>
         <div class="rest__resume-line box__line"></div>
         <div class="rest__resume-place-name_e">Education</div>
         <div class="rest__information-box information-box">
@@ -100,8 +105,8 @@
             facere reiciendis quae sapiente? Nulla labore corporis dolores voluptatem ad?</p>
         </div>
       </div>
-      <div class="rest__skill-box skills-box">
-        <h2 class="rest__skill-header box__header">SKILLS</h2>
+      <div class="rest__skill-box">
+        <h2 id="anchorSkills" class="rest__skill-header box__header">SKILLS</h2>
         <div class="rest__skill-line box__line"></div>
         <div class="rest__skill-place-name_c">Tech Stack:</div>
         <div class="rest__skill-abilities-box abilities-box">
@@ -114,7 +119,7 @@
         </div>
       </div>
       <div class="rest__portfolio-box">
-        <h2 class="rest__portfolio-header box__header">Portfolio</h2>
+        <h2 id="anchorPortfolio" class="rest__portfolio-header box__header">Portfolio</h2>
         <div class="rest__portfolio-line box__line"></div>
         <div class="rest__portfolio-work-box work-box">
           <li class="work-box__header">Fifteen years of work as a programmer </li>
@@ -131,8 +136,36 @@
           <img class="work-box__img" style="aspect-ratio: 1.59468439 / 1;" src="./Image/prog3.jpeg">
         </div>
       </div>
+      <div class="rest__blog-box">
+        <h2 id="anchorBlog" class="rest__blog-header box__header">BLOG</h2>
+        <div class="rest__blog-line box__line"></div>
+        <div class="rest__blog-section blog-section">
+          <img class="blog-section__img" src="./Image/blog1.jpeg">
+          <div class="blog-section__theme">Which language is most suitable for novice programmers.</div>
+          <div class="blog-section__text">Are you a beginner programmer you don't know where to start? In this blog we
+            will tell you about the most popular languages and their capabilities. We will determine your ...
+          </div>
+        </div>
+        <div class="rest__blog-line box__line"></div>
+        <div class="rest__blog-section blog-section">
+          <img class="blog-section__img" src="./Image/blog2.jpeg">
+          <div class="blog-section__theme">My start in the field of programming.</div>
+          <div class="blog-section__text">I will tell you how my career began. what difficulties a beginner had in my
+            time...
+          </div>
+        </div>
+        <div class="rest__blog-line box__line"></div>
+        <div class="rest__blog-section blog-section">
+          <img class="blog-section__img" src="./Image/blog3.jpeg">
+          <div class="blog-section__theme">Working in a large team.</div>
+          <div class="blog-section__text">I will tell you about all the subtleties of working in a team. About my first
+            experience working in a team. how to join a team for a beginner ...
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+  <script src="./anchors.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/less@4">
   </script>
 </body>

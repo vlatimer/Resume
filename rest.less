@@ -7,6 +7,35 @@
   grid-area: rest;
   padding: 30px 15px 0px 15px;
 
+  &__home {
+    &-box {
+      margin-bottom: 20px;
+    }
+
+    &-big-img {
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      border: 3px solid @primary;
+      border-radius: 5%;
+      background-position: center center;
+      background-size: 100% 100%;
+      background-image: url(./Image/big-img.jpeg);
+      color: white;
+      width: 100%;
+      font-size: 1.7rem;
+      aspect-ratio: 1.5009 / 1;
+      margin: auto;
+
+      @media @breakpoint-lg {
+        font-size: 1rem;
+      }
+
+      @media @breakpoint-md {
+        font-size: 1.5rem;
+      }
+    }
+  }
 
   &__resume-place-name {
     &_e {
@@ -34,5 +63,4 @@
     display: grid;
     grid-template: repeat(4, 1fr) / 1fr 1rem 1fr;
   }
-
 }

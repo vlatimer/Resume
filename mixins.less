@@ -94,3 +94,13 @@
     }
   }
 }
+
+.boxImg(@color, @width, @margin, @aspectW, @aspectH) {
+  aspect-ratio: @aspectW / @aspectH;
+  border: 5px solid @color;
+  border-radius: 10px;
+  margin: @margin 0 @margin 0;
+  width: @width;
+  position: relative;
+  box-sizing: border-box;
+}
