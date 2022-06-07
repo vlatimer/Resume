@@ -1,0 +1,41 @@
+@import "styles";
+
+
+.burger {
+  display: none;
+  background-color: @primary;
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+
+  &__button-box {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__btn {
+    padding: 0;
+    margin: 0;
+    width: 16.67%;
+    height: 100%;
+    background-color: transparent;
+
+    &:hover {
+      letter-spacing: 2px;
+    }
+
+    &:focus {
+      background-color: darken(@primary, 35%);
+    }
+  }
+
+  @media @breakpoint-md {
+    display: block;
+  }
+}

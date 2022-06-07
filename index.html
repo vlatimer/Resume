@@ -11,10 +11,21 @@
   <link rel="stylesheet/less" type="text/css" href="./less/about.less">
   <link rel="stylesheet/less" type="text/css" href="./less/rest.less">
   <link rel="stylesheet/less" type="text/css" href="./less/styles.less">
+  <link rel="stylesheet/less" type="text/css" href="./less/burger.less">
 
 </head>
 
 <body>
+  <div class="burger">
+    <div class="burger__button-box">
+      <button onclick="scrollToElem(anchorHome)" class="burger__btn btn">HOME</button>
+      <button onclick="scrollToElem(anchorResume)" class=" burger__btn btn">RESUME</button>
+      <button onclick="scrollToElem(anchorSkills)" class="burger__btn btn">SKILLS</button>
+      <button onclick="scrollToElem(anchorPortfolio)" class="burger__btn btn">PORTFOLIO</button>
+      <button onclick="scrollToElem(anchorBlog)" class="burger__btn btn">BLOG</button>
+      <button onclick="scrollToElem(anchorContacts)" class="burger__btn btn">CONTACT</button>
+    </div>
+  </div>
   <div class="wrapper">
     <div class="menu">
       <button onclick="scrollToElem(anchorHome)" class="menu__btn btn">HOME</button>
