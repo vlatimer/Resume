@@ -17,7 +17,10 @@
 
 <body>
   <div class="burger">
-    <div class="burger__button-box">
+    <button onclick="openBurger()" class="burger__btn-open btn">NAVIGATION</button>
+    <div id="burger-menu" onclick="openBurger()" class="burger__btn-close">
+    </div>
+    <div id="burger" class="burger__btn-box">
       <button onclick="scrollToElem(anchorHome)" class="burger__btn btn">HOME</button>
       <button onclick="scrollToElem(anchorResume)" class=" burger__btn btn">RESUME</button>
       <button onclick="scrollToElem(anchorSkills)" class="burger__btn btn">SKILLS</button>

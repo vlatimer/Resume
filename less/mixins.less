@@ -1,19 +1,20 @@
 @import "styles";
 
-.btn(@bg, @width, @height) {
+.btn(@bg, @width, @height, @ifAnim) {
   width: @width;
   height: @height;
   background-color: @bg;
+  position: relative;
 
   &+& {
     margin-top: 0.3rem;
   }
 
-  &:hover {
+  &:hover when(@ifAnim > 0) {
     padding-left: 1.125rem;
   }
 
-  &:focus {
+  &:focus when(@ifAnim > 0) {
     padding-left: 1.25rem;
     background-color: darken(@bg, 35%);
   }

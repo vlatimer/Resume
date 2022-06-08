@@ -6,6 +6,8 @@ const anchorBlog = document.getElementById("anchorBlog");
 const anchorContact = document.getElementById("anchorContact");
 const restBox = document.getElementById("restBox");
 const contactForm = document.getElementById("contactForm");
+const burger = document.getElementById("burger");
+const burgerMenu = document.getElementById("burger-menu");
 
 async function scrollToElem(elem) {
   let promise = new Promise((resolve) => {
@@ -21,4 +23,9 @@ async function scrollToElem(elem) {
 contactForm.onsubmit = (e) => {
   e.preventDefault();
   contactForm.reset();
+};
+
+function openBurger() {
+  burger.classList.toggle("burger__btn-box_active");
+  burgerMenu.classList.toggle("burger__btn-close_active");
 }

@@ -7,6 +7,13 @@
   grid-area: rest;
   padding: 30px 15px 0px 15px;
 
+  @media @breakpoint-sm {
+    overflow-x: auto;
+    overflow-y: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   &__home {
     &-box {
       margin-bottom: 20px;
@@ -115,6 +122,10 @@
       width: 100px;
       height: 20px;
 
+      &+& {
+        margin-left: 5px
+      }
+
       &:hover {
         letter-spacing: 2px;
       }
@@ -123,7 +134,6 @@
         background-color: darken(@primary, 35%);
       }
 
-      border-radius: 10px;
     }
   }
 }
