@@ -12,18 +12,33 @@
 
 body,
 html {
-  ::-webkit-scrollbar {
+  &::-webkit-scrollbar {
     width: 5px;
   }
 
-  ::-webkit-scrollbar-track {
+  &::-webkit-scrollbar-track {
     background: rgb(48, 49, 54);
   }
 
-  ::-webkit-scrollbar-thumb {
+  &::-webkit-scrollbar-thumb {
     background-color: white;
     border-radius: 20px;
   }
+
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: lighten(gray, 20%);
+  border-radius: 20px;
 }
 
 .wrapper {
@@ -50,7 +65,6 @@ html {
       ". . ."
       ". rest ."
       ". . .";
-
   }
 }
 
