@@ -13,7 +13,7 @@ async function scrollToElem(elem) {
   let promise = new Promise((resolve) => {
     elem.scrollIntoView({
       block: "start",
-      behavior: "smooth"
+      behavior: "smooth",
     });
     resolve("done");
   });

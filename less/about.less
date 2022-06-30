@@ -24,13 +24,19 @@
   }
 
   &__header {
-    width: 80%;
+
+    width: 100%;
     display: flex;
     justify-content: center;
     white-space: nowrap;
 
     & * {
       white-space: nowrap;
+    }
+
+    &-box {
+      position: relative;
+      width: 80%;
     }
 
     &_color_pr {
@@ -44,7 +50,9 @@
     width: 80%;
 
     &_weigth_s {
+      margin-top: 20px;
       font-weight: 900;
+      width: 100%;
     }
 
     &_color-with-alpha {
@@ -56,10 +64,19 @@
     .line(fade(black, 20%), 90%, 1px)
   }
 
+  &__button-box {
+    position: relative;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__contacts {
     &-box {
+      text-align: center;
       white-space: nowrap;
-      width: fit-content;
+      width: 80%;
       cursor: pointer;
       z-index: 0;
       overflow: hidden;
@@ -84,6 +101,8 @@
 
       z-index: 2;
       font-weight: 200;
+      width: 100%;
+      height: 100%;
     }
 
     &-email::before {
@@ -129,6 +148,11 @@
   }
 
   &__social-network {
+    &-box {
+
+      margin-top: 20px;
+    }
+
     & * {
       white-space: nowrap;
     }
