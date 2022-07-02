@@ -114,28 +114,8 @@ a {
 }
 
 .abilities-box {
-  &__child[data-text="js"] {
-    .abilityChild(1, 1);
-  }
-
-  &__child[data-text="git"] {
-    .abilityChild(3, 4);
-  }
-
-  &__child[data-text="css"] {
-    .abilityChild(3, 2);
-  }
-
-  &__child[data-text="pgsql"] {
-    .abilityChild(3, 3);
-  }
-
-  &__child[data-text="py"] {
-    .abilityChild(1, 3);
-  }
-
-  &__child[data-text="html"] {
-    .abilityChild(1, 4);
+  &__child {
+    .abilityChild();
   }
 }
 

@@ -51,15 +51,9 @@
   }
 }
 
-.abilityChild(@x, @y) {
-  cursor: pointer;
-  position: relative;
-  grid-column-start: @x;
-  grid-column-end: span 1;
-  grid-row-start: @y;
-  grid-row-end: span 1;
-
-  margin: auto;
+.abilityChild() {
+  margin-left: 10px;
+  margin-bottom: 10px;
 
   display: flex;
   justify-content: flex-start;
@@ -71,11 +65,7 @@
   width: 8rem;
   color: white;
   font-size: 0.7rem;
-  transition: all 0.25s;
 
-  &:hover {
-    transform: scale(1.2);
-  }
 
   & img {
     margin-right: 10px;
