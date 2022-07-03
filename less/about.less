@@ -170,20 +170,25 @@
         margin-left: 0.1rem;
       }
 
-      img {
+      i {
+        color: white;
         transition: 0.25s ease;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        height: 70%;
-        width: 70%;
-        position: absolute;
+        height: 100%;
+        width: 100%;
+        position: relative;
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          transition: 0.25s ease;
+        }
       }
 
       &:hover {
-        img {
-          height: 80%;
-          width: 80%;
+        i::before {
+          color: gray;
         }
       }
     }
