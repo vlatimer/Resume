@@ -44,25 +44,9 @@
     }
   }
 
-  &__resume-place-name {
-    &_e {
-      .placeName("e.png");
-    }
-
-    &_h {
-      .placeName("h.png");
-    }
-  }
-
   &__information-box {
     padding: 0.5rem 0.5rem 1.3rem 0.5rem;
     margin-bottom: 10px;
-  }
-
-  &__skill-place-name {
-    &_c {
-      .placeName("c.png");
-    }
   }
 
   &__skill-abilities-box {
@@ -137,5 +121,18 @@
       }
 
     }
+  }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: lighten(gray, 20%);
+    border-radius: 20px;
   }
 }

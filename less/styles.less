@@ -161,3 +161,23 @@ a {
 .box__header {
   margin-bottom: 10px;
 }
+
+.pl-n {
+  &__box {
+    .placeName();
+  }
+
+  &__icon {
+    margin: 0 5px 0 5px;
+    height: 100%;
+    aspect-ratio: 1/1;
+
+    &::before {
+      color: @primary;
+    }
+  }
+
+  &__header {
+    color: @primary;
+  }
+}

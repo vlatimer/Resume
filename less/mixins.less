@@ -26,28 +26,13 @@
   border: @brw solid @brc;
 }
 
-.placeName(@img) {
+.placeName() {
   & {
     margin: 20px 0 20px 0;
     position: relative;
-    color: @primary;
-    font-size: 1.2rem;
-    display: block;
+    display: flex;
+    align-items: center;
     border-left: 5px solid @primary;
-    padding-left: 2rem;
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0.2rem;
-      width: 20px;
-      aspect-ratio: 1 / 1;
-      background-image: url("../Image/@{img}");
-      background-size: 100% 100%;
-      background-position: center center;
-    }
   }
 }
 
@@ -58,20 +43,24 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 5px 0 0;
+  padding: 0 10px 0 0;
   background-color: @primary;
   width: fit-content;
   height: 2rem;
-  width: 8rem;
+
   color: white;
   font-size: 0.7rem;
 
 
-  & img {
+  & i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 10px;
     background-color: darken(@primary, 35%);
     height: 100%;
     aspect-ratio: 1 /1;
+    position: relative;
   }
 
   @media @breakpoint-lg {
@@ -79,7 +68,7 @@
       width: fit-content;
       height: 1.5rem;
 
-      & img {
+      & i {
         margin-right: 5px;
       }
     }
