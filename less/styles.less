@@ -2,6 +2,7 @@
 @breakpoint-lg: ~"(max-width: 992px)";
 @breakpoint-md: ~"(max-width: 768px)";
 @breakpoint-sm: ~"(max-width: 576px)";
+@breakpoint-xl: ~"(max-width: 1200px)";
 @primary: rgb(30, 174, 171);
 
 * {
@@ -109,16 +110,12 @@ a {
 .work-box {
   display: flex;
   flex-direction: column;
-  align-items: center;
 
-  &__header {
-    font-size: 1.1rem;
-    opacity: 0.7;
-    position: relative;
-  }
+  &__header {}
 
   &__img {
-    .boxImg(@primary, 80%, 20px, 1, 1)
+    align-self: center;
+    .boxImg(@primary, 70%, 20px, 1, 1)
   }
 }
 
@@ -127,18 +124,23 @@ a {
   position: relative;
   width: 100%;
   height: fit-content;
-  border: 3px solid @primary;
+  display: flex;
+  flex-direction: column;
 
   &__img {
-    .boxImg(none, 100%, 0px, 1, .6);
+    align-self: center;
+    .boxImg(@primary, 100%, 0px, 1, .6);
   }
 
-  &__theme {
+  &__link {
+    text-decoration: none;
+    color: black;
     cursor: pointer;
     transition: all 0.5s;
-    margin: 10px 0 0 10px;
     font-size: 1.2rem;
     font-weight: 600;
+    margin-top: 10px;
+    align-self: flex-start;
 
     &:hover {
       text-decoration: underline;
@@ -159,7 +161,7 @@ a {
 }
 
 .box__header {
-  margin-bottom: 10px;
+  margin: 30px 0 10px 0;
 }
 
 .pl-n {
